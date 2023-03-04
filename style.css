@@ -14,6 +14,9 @@ body {
 
 #container {
   margin: 56px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 588px;
   height: 712px;
 }
@@ -36,4 +39,38 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+}
+
+#switch {
+  padding: 8px 0;
+  display: flex;
+  width: 64px;
+  height: 40px;
+}
+
+#switch span {
+  position: relative;
+  width: 64px;
+  height: 24px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+}
+
+#switch span button {
+  background: url(./assets/moon-stars.svg) white no-repeat center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 9999px;
+  cursor: pointer;
+
+  position: absolute;
+  right: 50%;
+  top: -25%;
+  width: 32px;
+  height: 32px;
 }
