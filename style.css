@@ -27,6 +27,8 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 8px;
+
+  width: 100%;
 }
 
 #profile img {
@@ -70,7 +72,7 @@ body {
 
   position: absolute;
   right: 50%;
-  top: -25%;
+  top: -21.5%;
   width: 32px;
   height: 32px;
 }
