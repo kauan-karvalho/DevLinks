@@ -6,8 +6,38 @@
   font-family: 'Inter', sans-serif;
 }
 
+:root {
+  --background: url(./assets/bg-desktop-dark.png);
+
+  --background-button: url(./assets/moon-stars.svg);
+  --button-shadow: rgba(0, 0, 0, 0.25);
+
+  --background-track: rgba(255, 255, 255, 0.1);
+  --border-track: rgba(255, 255, 255, 0.5);
+
+  --background-links: rgba(255, 255, 255, 0.1);
+  --border-links: rgba(255, 255, 255, 0.5);
+
+  --text-color: white;
+}
+
+.light {
+  --background: url(./assets/bg-desktop-light.png);
+
+  --background-button: url(./assets/sun.svg);
+  --button-shadow: rgba(0, 0, 0, 0.1);
+
+  --background-track: rgba(0, 0, 0, 0.05);
+  --border-track: rgba(0, 0, 0, 0.5);
+
+  --background-links: rgba(0, 0, 0, 0.05);
+  --border-links: rgba(0, 0, 0, 0.5);
+
+  --text-color: black;
+}
+
 body {
-  background: url(./assets/bg-desktop-dark.png) no-repeat;
+  background: var(--background) no-repeat;
   background-size: cover;
   height: 100vh;
 }
@@ -37,7 +67,7 @@ body {
 }
 
 #profile span {
-  color: white;
+  color: var(--text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -55,26 +85,30 @@ body {
   width: 64px;
   height: 24px;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--background-track);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-track);
   border-radius: 9999px;
 }
 
 #switch span button {
-  background: url(./assets/moon-stars.svg) white no-repeat center;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  background: var(--background-button) white no-repeat center;
+  box-shadow: 0px 2px 8px var(--button-shadow);
   border: 0;
   border-radius: 9999px;
   cursor: pointer;
 
   position: absolute;
-  right: 50%;
+  right: 51%;
   top: -21.5%;
   width: 32px;
   height: 32px;
+}
+
+.light #switch span button {
+  left: 51%;
 }
 
 #links {
@@ -91,11 +125,11 @@ body {
 }
 
 #links ul li {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--background-links);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-links);
   border-radius: 8px;
 }
 
@@ -106,7 +140,7 @@ body {
 
   border-radius: 8px;
 
-  color: white;
+  color: var(--text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -127,7 +161,7 @@ body {
   padding: 8px;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--text-color);
 }
 
 footer {
@@ -137,7 +171,7 @@ footer {
 }
 
 footer p {
-  color: white;
+  color: var(--text-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
