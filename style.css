@@ -11,12 +11,17 @@
 
   --background-button: url(./assets/moon-stars.svg);
   --button-shadow: rgba(0, 0, 0, 0.25);
+  --background-button-hover: rgba(255, 255, 255, 0.2);
 
   --background-track: rgba(255, 255, 255, 0.1);
   --border-track: rgba(255, 255, 255, 0.5);
 
   --background-links: rgba(255, 255, 255, 0.1);
+  --background-links-hover: rgba(255, 255, 255, 0.05);
   --border-links: rgba(255, 255, 255, 0.5);
+  --border-links-hover: white;
+
+  --background-social-links-hover: rgba(255, 255, 255, 0.2);
 
   --text-color: white;
 }
@@ -26,12 +31,17 @@
 
   --background-button: url(./assets/sun.svg);
   --button-shadow: rgba(0, 0, 0, 0.1);
+  --background-button-hover: rgba(0, 0, 0, 0.1);
 
   --background-track: rgba(0, 0, 0, 0.05);
   --border-track: rgba(0, 0, 0, 0.5);
 
   --background-links: rgba(0, 0, 0, 0.05);
+  --background-links-hover: rgba(0, 0, 0, 0.02);
   --border-links: rgba(0, 0, 0, 0.5);
+  --border-links-hover: black;
+
+  --background-social-links-hover: rgba(0, 0, 0, 0.1);
 
   --text-color: black;
 }
@@ -105,6 +115,12 @@ body {
   top: -21.5%;
   width: 32px;
   height: 32px;
+
+  transition: outline 0.1s;
+}
+
+#switch span button:hover {
+  outline: 8px solid var(--background-button-hover);
 }
 
 .light #switch span button {
@@ -131,6 +147,13 @@ body {
 
   border: 1px solid var(--border-links);
   border-radius: 8px;
+
+  transition: background 0.3s;
+}
+
+#links ul li:hover {
+  background: var(--background-links-hover);
+  border: 1.5px solid var(--border-links-hover);
 }
 
 #links ul li a {
@@ -151,17 +174,24 @@ body {
   padding: 24px;
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 8px;
   width: 100%;
 
   font-size: 24px;
 }
 
 #social-links a {
-  padding: 8px;
+  padding: 16px;
   display: flex;
   align-items: center;
   color: var(--text-color);
+
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+#social-links a:hover {
+  background: var(--background-social-links-hover);
 }
 
 footer {
