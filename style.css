@@ -111,12 +111,14 @@ body {
   cursor: pointer;
 
   position: absolute;
-  right: 51%;
+  right: 50%;
+  transform: translateX(0%);
   top: -21.5%;
   width: 32px;
   height: 32px;
 
   transition: outline 0.1s;
+  animation: slide-back 0.3s forwards;
 }
 
 #switch span button:hover {
@@ -124,7 +126,7 @@ body {
 }
 
 .light #switch span button {
-  left: 51%;
+  animation: slide-in 0.3s forwards;
 }
 
 #links {
@@ -205,4 +207,22 @@ footer p {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+}
+
+@keyframes slide-in {
+  from {
+   transform: translate(0%);
+  }
+  to {
+    transform: translate(101%);
+  }
+}
+
+@keyframes slide-back {
+  from {
+    transform: translate(101%);
+  }
+  to {
+   transform: translate(0%);
+  }
 }
