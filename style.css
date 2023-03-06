@@ -57,7 +57,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 588px;
+  width: 100%;
+  max-width: 588px ;
+  min-width: 320px;
   height: 712px;
 }
 
@@ -224,5 +226,14 @@ footer p {
   }
   to {
    transform: translate(0%);
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    --background: url(./assets/bg-mobile-dark.png);
+  }
+  .light {
+    --background: url(./assets/bg-mobile-light.png);
   }
 }
